@@ -6,6 +6,7 @@
     "babel-cli": "^6.26.0",
     "classnames": "^2.2.6",
     "lodash": "^4.17.11",
+    "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-flex-proto": "^1.0.0",
