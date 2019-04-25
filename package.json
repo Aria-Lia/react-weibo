@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-cli": "^6.26.0",
+    "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
+    "jquery": "^3.4.0",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
+    "popper.js": "^1.15.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-flex-proto": "^1.0.0",

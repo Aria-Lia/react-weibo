@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import {Loading} from 'BlueBlur/loading'
-import 'BlueBlur/assets/styles/app.scss'
 import './App.css';
 
 class App extends Component {
@@ -8,7 +6,6 @@ class App extends Component {
     return (
       <div>
         123
-        <Loading />
       </div>
     );
   }
