@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
+import TopNavBar from './TopNavBar'
+import SideNav from './SideNav'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class Layout extends Component {
 
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">Navbar</a>
-      </nav>
+      <Container fluid={true}>
+        <Row>
+          <Col md={2}>
+            <SideNav />
+          </Col>
+          <Col>
+            <TopNavBar />
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }
