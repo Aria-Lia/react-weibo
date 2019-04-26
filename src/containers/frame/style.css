@@ -1,19 +1,61 @@
 .side-nav {
   height: 94vh;
   background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.5);
 }
 
-.side-nav Nav.Link {
+.side-nav a {
   color: white;
 }
 
-.side-nav-col {
+.side-nav-item {
+  padding: 15px;
+  padding-left: 20px;
+
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+
+  -webkit-transition: padding-left 0.5s ease-out;
+  -moz-transition: padding-left 0.5s ease-out;
+  -o-transition: padding-left 0.5s ease-out;
+  transition: padding-left 0.5s ease-out;
+}
+
+.side-nav-item-active {
+  padding: 15px;
+  padding-left: 40px;
+  background-color: #E8945F;
+
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+
+  -webkit-transition: padding-left 0.3s ease-out;
+  -moz-transition: padding-left 0.3s ease-out;
+  -o-transition: padding-left 0.3s ease-out;
+  transition: padding-left 0.3s ease-out;
+}
+
+.side-nav-col-1 {
   padding-left: 0rem;
+}
+
+.side-nav-col-2 {
+  padding-right: 0rem;
 }
 
 .top-nav-bar {
   height: 6vh;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.6);
+}
+.top-nav-bar span {
+  color: #E8945F;
+}
+
+.nav-bar-brand {
+  padding: 0 100px;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import {Layout} from './containers/frame/index'
+import Content from './containers/content/index'
 import './App.css';
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
         <div className={'bg-image'} />
         <BrowserRouter>
           <Layout>
-            App
+            <Content />
           </Layout>
         </BrowserRouter>
       </>

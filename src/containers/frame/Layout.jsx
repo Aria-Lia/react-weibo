@@ -16,10 +16,10 @@ class Layout extends Component {
 
         <Container fluid={true}>
           <Row>
-            <Col md={2} className="side-nav-col">
+            <Col md={2} className="side-nav-col-1">
               <SideNav />
             </Col>
-            <Col>
+            <Col className="side-nav-col-2">
               {children}
             </Col>
           </Row>
