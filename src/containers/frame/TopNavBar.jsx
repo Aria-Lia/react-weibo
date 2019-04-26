@@ -5,7 +5,7 @@ class TopNavBar extends Component {
 
   render() {
     return (
-      <Navbar bg="dark" variant="dark">
+      <Navbar className="top-nav-bar" variant="dark">
         <Navbar.Brand href="#" className="mr-auto">
           React-Weibo
         </Navbar.Brand>

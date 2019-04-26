@@ -6,9 +6,14 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Layout />
-      </BrowserRouter>
+      <>
+        <div className={'bg-image'} />
+        <BrowserRouter>
+          <Layout>
+            App
+          </Layout>
+        </BrowserRouter>
+      </>
     );
   }
 }

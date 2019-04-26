@@ -4,21 +4,27 @@ import SideNav from './SideNav'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import './style.css'
 
 class Layout extends Component {
 
   render() {
+    const {children} = this.props
     return (
-      <Container fluid={true}>
-        <Row>
-          <Col md={2}>
-            <SideNav />
-          </Col>
-          <Col>
-            <TopNavBar />
-          </Col>
-        </Row>
-      </Container>
+      <>
+        <TopNavBar />
+
+        <Container fluid={true}>
+          <Row>
+            <Col md={2} className="side-nav-col">
+              <SideNav />
+            </Col>
+            <Col>
+              {children}
+            </Col>
+          </Row>
+        </Container>
+      </>
     )
   }
 }

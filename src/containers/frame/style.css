@@ -1,0 +1,19 @@
+.side-nav {
+  height: 94vh;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.side-nav Nav.Link {
+  color: white;
+}
+
+.side-nav-col {
+  padding-left: 0rem;
+}
+
+.top-nav-bar {
+  height: 6vh;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.6);
+}
