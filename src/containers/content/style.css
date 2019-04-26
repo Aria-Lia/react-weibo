@@ -1,4 +1,4 @@
-.right-content {
-  height: 100%;
-  overflow: scroll;
+div.right-content {
+  height: 94vh;
+  overflow-y: scroll;
 }

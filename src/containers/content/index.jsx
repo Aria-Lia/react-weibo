@@ -7,7 +7,7 @@ class Content extends Component {
     return (
       <div className="right-content">
         {
-          Array(200).fill("123").map((item, index) => <div key={index}>{item}</div>)
+          Array(200).fill("").map((item, index) => <div key={index}>{index}</div>)
         }
       </div>
     )
