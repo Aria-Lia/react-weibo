@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
-import Home from '../home/index'
 
 /**
  * Import Components
  */
 import Settings from '../containers/settings/index'
 import Timeline from '../containers/timeline/index'
+import Home from '../containers/home/index'
 
 class MainRouter extends Component {
 

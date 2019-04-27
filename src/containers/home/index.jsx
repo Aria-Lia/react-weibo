@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import RedirectBox from './RedirectBox'
 import './style.css'
 
 class Home extends Component {
@@ -6,9 +7,7 @@ class Home extends Component {
   render() {
     return (
       <div className="right-content">
-        {
-          Array(200).fill("").map((item, index) => <div key={index}>{index}</div>)
-        }
+        <RedirectBox />
       </div>
     )
   }
