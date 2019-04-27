@@ -8,7 +8,7 @@ class SideNav extends Component {
     super(props)
 
     this.state = {
-      currentKey: navKeys[0],
+      currentKey: null,
     }
   }
 
@@ -24,7 +24,7 @@ class SideNav extends Component {
     const {currentKey} = this.state
     
     return (
-      <Nav className={"flex-column side-nav"} defaultActiveKey={navKeys[0]} onSelect={key => this.handleSelect(key)}>
+      <Nav className={"flex-column side-nav"} onSelect={key => this.handleSelect(key)}>
         {
           navKeys.map(e => {
             return (
