@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
+import Home from '../home/index'
 
 /**
  * Import Components
@@ -12,7 +13,7 @@ class MainRouter extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/' component={Timeline}/>
+        <Route exact path='/' component={Home}/>
         <Route path='/timeline' component={Timeline}/>
         <Route path='/settings' component={Settings}/>
       </Switch>
