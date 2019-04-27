@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import {Layout} from './containers/frame/index'
-import Content from './containers/content/index'
+import MainRouter from './router/index'
 import './App.css';
 
 class App extends Component {
@@ -9,11 +8,9 @@ class App extends Component {
     return (
       <>
         <div className={'bg-image'} />
-        <BrowserRouter>
-          <Layout>
-            <Content />
-          </Layout>
-        </BrowserRouter>
+        <Layout>
+            <MainRouter />
+        </Layout>
       </>
     );
   }

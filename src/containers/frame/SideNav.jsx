@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav'
 
 const navKeys = ["Timeline", "Settings"]
@@ -14,11 +15,14 @@ class SideNav extends Component {
   handleSelect(key) {
     this.setState({
       currentKey: key
+    }, () => {
+      this.props.history.push(`/${key}`);
     })
   }
 
   render() {
     const {currentKey} = this.state
+    
     return (
       <Nav className={"flex-column side-nav"} defaultActiveKey={navKeys[0]} onSelect={key => this.handleSelect(key)}>
         {
@@ -39,4 +43,4 @@ class SideNav extends Component {
   }
 }
 
-export default SideNav
+export default withRouter(SideNav)

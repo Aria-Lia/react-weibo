@@ -10,6 +10,7 @@ class Layout extends Component {
 
   render() {
     const {children} = this.props
+    
     return (
       <>
         <TopNavBar />
