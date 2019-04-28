@@ -7,11 +7,11 @@ class RedirectBox extends Component {
   render() {
     return (
       <>
-        <CardView size='medium' className={"card-view"}>
+        <CardView size='medium'>
           <h2>Welcome to React-Weibo</h2>
-            <Button variant="primary" size="lg" block>
-              Login
-            </Button>
+          <Button variant="light" size="sm" block  className={"login-button"}>
+            Login Page
+          </Button>
         </CardView>
       </>
     )

@@ -10,6 +10,23 @@
   padding: 2rem 3rem;
 }
 
+.card-view button {
+  border: 0;
+  background-color: #E8945F;
+  color: white;
+}
+
+.card-view button:hover {
+  background-color: rgb(250, 115, 32);
+  color: white;
+}
+
+.btn:not(:disabled):not(.disabled):active {
+  background-color: rgb(250, 115, 32);
+  color: white;
+}
+
+
 .card-view-large {
   width: 76vw;
 }

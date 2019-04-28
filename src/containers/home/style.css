@@ -2,3 +2,7 @@ div.right-content {
   height: 94vh;
   overflow-y: scroll;
 }
+
+.login-button  {
+  margin-top: 2rem;
+}

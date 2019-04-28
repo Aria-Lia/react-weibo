@@ -20,3 +20,9 @@
 Layout {
   height: 100%;
 }
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
