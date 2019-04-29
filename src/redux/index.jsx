@@ -1,11 +1,22 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk';
 import rootReducer from './reducers/index'
 
+/**
+ * Use Redux Degugger as Enhancer
+ * https://github.com/jhen0409/react-native-debugger/issues/280
+ */
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+/**
+ * Initial State
+ */
 let preloadedState = {
   appData: {
     clientId: "1237279317",
     redirectUrl: "https://aria-lia.github.io/react-weibo/",
-    logoutUrl: "https://aria-lia.github.io/react-weibo/logout"
+    logoutUrl: "https://aria-lia.github.io/react-weibo/logout",
+    basePath: '/react-weibo'
   }
 }
 // const API_KEY = process.env.REACT_APP_OPEN_WEIBO_API_KEY
@@ -20,8 +31,13 @@ if (URL) {
     }
   }
 }
+
+/**
+ * Create Store
+ */
 const store = createStore(rootReducer,
-  {...preloadedState},   
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+  {...preloadedState},
+  composeEnhancer(applyMiddleware(thunk))
+)
 
 export default store

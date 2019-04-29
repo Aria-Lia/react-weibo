@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
+import { connect } from 'react-redux'
 import Nav from 'react-bootstrap/Nav'
 
 const navKeys = ["Timeline", "Settings"]
@@ -13,10 +14,11 @@ class SideNav extends Component {
   }
 
   handleSelect(key) {
+    const {basePath} = this.props
     this.setState({
       currentKey: key
     }, () => {
-      this.props.history.push(`/${key}`);
+      this.props.history.push(`${basePath}/${key}`);
     })
   }
 
@@ -43,4 +45,8 @@ class SideNav extends Component {
   }
 }
 
-export default withRouter(SideNav)
+const mapStateToProps = (state, ownProps) => ({
+  basePath: state.appData.basePath
+})
+
+export default connect(mapStateToProps)(withRouter(SideNav))

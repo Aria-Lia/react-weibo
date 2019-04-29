@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 /**
  * Import Components
@@ -11,14 +12,19 @@ import Home from '../containers/home/index'
 class MainRouter extends Component {
 
   render() {
+    const {basePath} = this.props
     return (
       <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route path='/timeline' component={Timeline}/>
-        <Route path='/settings' component={Settings}/>
+        <Route exact path={basePath} component={Home}/>
+        <Route path={`${basePath}/timeline`} component={Timeline}/>
+        <Route path={`${basePath}/settings`} component={Settings}/>
       </Switch>
     )
   }
 }
 
-export default MainRouter
+const mapStateToProps = (state, ownProps) => ({
+  basePath: state.appData.basePath
+})
+
+export default connect(mapStateToProps)(MainRouter)

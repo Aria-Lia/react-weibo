@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { connect } from 'react-redux'
 
 class TopNavBar extends Component {
   handleSelect = (key) => {
+    const {basePath} = this.props
     switch (key) {
       case "home":
-      this.props.history.push(`/`);
+      this.props.history.push(basePath);
         break;
     
       default:
@@ -33,4 +35,8 @@ class TopNavBar extends Component {
   }
 }
 
-export default withRouter(TopNavBar)
+const mapStateToProps = (state, ownProps) => ({
+  basePath: state.appData.basePath
+})
+
+export default connect(mapStateToProps)(withRouter(TopNavBar))
