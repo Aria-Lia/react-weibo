@@ -11,11 +11,15 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 /**
  * Initial State
  */
+const clientId = "1237279317"
+const redirectUrl = "https://aria-lia.github.io/react-weibo/"
+const logoutUrl = "https://aria-lia.github.io/react-weibo/logout"
 let preloadedState = {
   appData: {
-    clientId: "1237279317",
-    redirectUrl: "https://aria-lia.github.io/react-weibo/",
-    logoutUrl: "https://aria-lia.github.io/react-weibo/logout",
+    clientId: clientId,
+    redirectUrl: redirectUrl,
+    logoutUrl: logoutUrl,
+    authUrl: `https://api.weibo.com/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUrl}&response_type=code`,
     basePath: '/react-weibo'
   }
 }

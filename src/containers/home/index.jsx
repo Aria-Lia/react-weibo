@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RedirectBox from './RedirectBox'
-import './style.css'
+import './style.less'
 
 class Home extends Component {
 
