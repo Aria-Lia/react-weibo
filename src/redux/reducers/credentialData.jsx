@@ -6,7 +6,10 @@ import {getAuthorizeToken} from '../../utils/index'
  */
 const authorizeToken = getAuthorizeToken()
 const initialState = {
-  authorizeToken
+  authorizeToken,
+  isFetchingAccessToken: false,
+  accessToken: null,
+  error: null
 }
 
 /**
@@ -14,6 +17,20 @@ const initialState = {
  */
 const credentialData = (state = initialState, action) => {
   switch (action.type) {
+    case type.GET_ACCESS_TOKEN_SUCCESS:
+      return {...state, 
+        accessToken: action.data, 
+        isFetchingAccessToken: false,
+        error: null
+      }
+    case type.GET_ACCESS_TOKEN_FAILURE:
+      return {...state, 
+        accessToken: null, 
+        isFetchingAccessToken: false,
+        error: action.error
+      }
+    case type.GET_ACCESS_TOKEN_STARTED:
+      return {...state, isFetchingAccessToken: true}
     default:
       return state;
   }

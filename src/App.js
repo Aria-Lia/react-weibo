@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import {Layout} from './containers/frame/index'
 import MainRouter from './router/index'
+import {getAccessToken} from './redux/actions/index'
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    const {authorizeToken, getAccessToken} = this.props
+
+    if (authorizeToken) {
+      getAccessToken()
+    }
+  }
+
   render() {
-  const client_secret = process.env.REACT_APP_OPEN_WEIBO_API_KEY
     return (
       <>
         <div className={'bg-image'} />
@@ -17,4 +26,16 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state, ownProps) => ({
+  authorizeToken: state.credentialData.authorizeToken
+})
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getAccessToken: () => {
+      dispatch(getAccessToken());
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
