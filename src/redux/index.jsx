@@ -8,7 +8,6 @@ import rootReducer from './reducers/index'
  */
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// const API_KEY = process.env.REACT_APP_OPEN_WEIBO_API_KEY
 
 /**
  * Create Store

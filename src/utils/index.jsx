@@ -6,6 +6,7 @@ export const getAuthorizeToken = () => {
     const codeIndex = URL.indexOf(tokenFlag)
     if (codeIndex !== -1) {
       const authorizeToken = URL.slice(codeIndex + tokenFlag.length)
+      localStorage.setItem("authorizeToken", authorizeToken)
       return authorizeToken;
     }
   }

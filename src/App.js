@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import {Layout} from './containers/frame/index'
 import MainRouter from './router/index'
-import {getAuthorizeToken} from './utils/index'
 import './App.css';
 
 class App extends Component {
   render() {
-    const authorizeToken = getAuthorizeToken()
-    if (authorizeToken) {
-      localStorage.setItem("authorizeToken", authorizeToken)
-    } else {
-      // Get Token
-    }
+  const client_secret = process.env.REACT_APP_OPEN_WEIBO_API_KEY
     return (
       <>
         <div className={'bg-image'} />
