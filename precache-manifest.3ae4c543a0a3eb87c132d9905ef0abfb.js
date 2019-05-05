@@ -12,15 +12,15 @@ self.__precacheManifest = [
     "url": "/react-weibo/static/js/runtime~main.d33a56b4.js"
   },
   {
-    "revision": "5399a39ac45caff8e0e3",
-    "url": "/react-weibo/static/js/main.099b6c8f.chunk.js"
+    "revision": "291e33ea697ffc49905a",
+    "url": "/react-weibo/static/js/main.96988771.chunk.js"
   },
   {
     "revision": "d85937050390a4876a33",
     "url": "/react-weibo/static/js/2.0dfbf095.chunk.js"
   },
   {
-    "revision": "5399a39ac45caff8e0e3",
+    "revision": "291e33ea697ffc49905a",
     "url": "/react-weibo/static/css/main.c0760eb2.chunk.css"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/react-weibo/static/css/2.7782662f.chunk.css"
   },
   {
-    "revision": "8a42cc5a6dabb1bcfadb89dcd65ea7ed",
+    "revision": "a42b487e49f9bee85f15c461f2630af7",
     "url": "/react-weibo/index.html"
   }
 ];

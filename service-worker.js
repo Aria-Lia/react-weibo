@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-weibo/precache-manifest.848ea4f2213bacae37b85aaa60de464b.js"
+  "/react-weibo/precache-manifest.3ae4c543a0a3eb87c132d9905ef0abfb.js"
 );
 
 workbox.clientsClaim();
